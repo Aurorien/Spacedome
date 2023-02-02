@@ -1,0 +1,367 @@
+/* bilder i projektet är mina egna och en gratisbild från pixabay (Bg_space_hem.png) */
+/* källa till kunskap om figure-elementet: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure */
+
+
+/* generell stilsättning av webbplatsens samtliga html-filer */
+
+@font-face {
+  font-family: GothicFont;
+  src: url('GrenzeGotisch-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300;
+}
+
+body {
+  background-color: #07020E;
+  min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+main {
+  font-family: GothicFont, monospace;
+  color: #f7f1f1;
+}
+
+
+figure {
+  margin-top: 10%;
+}
+
+.navbar {
+  position: sticky;
+  bottom: 0px;
+
+}
+
+.nav_space {
+  margin: 0 10% 0 12%;
+ }
+
+.navbarlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* margin: 0 5% 0 5%; */
+  padding: 5% 12% 7% 2%;
+  font-size: 1.2rem;
+  background-color:#07020E;
+}
+
+a:link {
+  color: rgb(147, 234, 242);
+}
+
+a:visited {
+  color: #e8e3f1;
+}
+
+a:hover {
+  color:#ffffff;
+  /* rgb(254, 252, 255) */
+}
+
+a:active {
+  color: rgb(124, 52, 248);
+}
+
+
+#body_hem, #body_contact {
+background-image: url(Bg_space_hem.png);
+}
+
+/* stilsättning specifikt för index.html */
+
+#nav_hem {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(SpaceDome-670w.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  grid-template-areas:
+  "header header header header"
+  "calender none about about"
+  "none2 none2 none2 none2"
+  ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 5fr;
+  font-size: 1.7rem;
+  font-family: GothicFont, monospace;
+  color: #f7f1f1;
+}
+
+#grid_header{
+  grid-area: header;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0%;
+}
+
+#grid_calender {
+  grid-area: calender;
+  padding-left: 5%;
+}
+
+#grid_about {
+  grid-area: about;
+  text-align: right;
+  padding-right: 5%;
+}
+
+
+#body_hem footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  font-family: GothicFont, monospace;
+  color: #f7f1f1;
+  margin: -90% 10% 0 10%;
+}
+
+#footer_hem {
+  height: 50%;
+  width: 40%;
+  margin-left: 10%;
+}
+
+#h2_openhour {
+  font-size: 1.8rem;
+}
+
+#p_openhour {
+  margin-left: 1rem;
+}
+
+#footer_openhour {
+  display: flex;
+  flex-direction: row;
+}
+
+#contact_hem {
+  color: #F6F2FB;
+}
+
+/* stilsättning specifikt för about_space_dome.html */
+
+#about_space_dome{
+  background-image: url(About_Space.png);
+}
+
+#article_about {
+  padding: 0% 15%;
+  font-size: 1.6rem;
+  color: rgb(232, 217, 253);
+}
+
+
+/* stilsättning specifikt för calender_space_dome.html */
+
+#calender_space_dome {
+  background-image: url(Calender_Space.png);
+}
+
+#article_calender {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.topic_calender {
+  font-size: 2rem;
+  margin: 2.5em 0 .2em 0;
+}
+
+.description_calender {
+  font-size: 1.3rem;
+  margin: 0 1em .5em 1em;
+}
+
+.entrance {
+  color: #CCC1E3;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 1% 0 5% 0;
+}
+
+/* stilsättning specifikt för contactspace_dome.html och thanks_site.html */
+
+fieldset {
+  border: none;
+}
+
+#body_thanks {
+  height: 100vh;
+  background-image: url(Bg_space_hem.png);
+}
+
+#form_contact, #legend_contact, #main_thanks {
+  margin: 10% 12% 0 12%;
+  font-family: GothicFont,monospace;
+  color:#f7f1f1;
+  font-size: 1.6rem;
+}
+
+#main_thanks {
+  margin: 0% 10% 60% 10%;
+  text-align: center;
+}
+
+#legend_contact {
+  margin-bottom: 5%;
+}
+
+
+#message_label {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  display: flex;
+}
+
+#message {
+  margin: 1% 0 2.5% 0;
+  }
+
+.input_contact {
+  margin-bottom: 2%;
+}
+
+.h2_contact {
+  font-size: 1rem;
+  margin-bottom: 0%;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 670px) {
+
+  .navbarlinks {
+    flex-direction: column;
+    margin: 0 81% 0 0;
+    padding: 2% 15% 5% 5%;
+    list-style: none;
+  }
+
+  .nav_space {
+    margin: .7em 0 .7em 0;
+   }
+
+ /* media queries för hemsidan index.html */
+
+  #nav_hem {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(SpaceDome-670w.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "calender none2 about"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 2.5rem;
+  }
+
+  #grid_header {
+    grid-area: header;
+    text-align: center;
+    font-size: 6rem;
+  }
+
+  #grid_calender {
+    grid-area: calender;
+    text-align: center;
+    margin: 0% -40%;
+  }
+
+  #grid_about {
+    grid-area: about;
+    text-align: end;
+    padding-right: 7%;
+  }
+
+
+
+#body_hem footer {
+  display: flex;
+  align-items:baseline;
+  font-size: 1.7rem;
+  font-family: GothicFont, monospace;
+  color: #f7f1f1;
+  background-color:#07020E;
+  margin: 0;
+  padding: 3% 0 3% 10%;
+}
+
+#h2_openhour {
+  font-size: 1.8rem;
+  margin: 0 1.5% 0 0;
+}
+
+#footer_openhour {
+  width: 100%;
+  display: flex;
+  /* text-align: left; */
+  align-items: baseline;
+}
+
+#contact_hem {
+  color: #F6F2FB;
+}
+
+ /* media queries för calender_space_dome.html */
+
+ #article_calender>h1 {
+  font-size: 3.6rem;
+ }
+
+ .description_calender {
+  margin: 0 30% .5% 30%;
+ }
+
+
+  /* media queries för about_space_dome.html */
+
+  #article_about p {
+    padding: 0% 9%;
+    font-size: 1.3rem;;
+  }
+
+  .topics_about {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  #article_about>figure {
+    padding: 0% 12% 10% 12%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+
+  /* media queries för contact_space_dome.html och thanks_site.html*/
+
+  #form_contact {
+    margin: 5% 10% 10% 30%;
+  }
+
+  #main_thanks {
+    margin: 0% 10% -3% 20%;
+    text-align: center;
+  }
+
+  #legend_contact {
+    margin: 5% 0 0 30%;
+  }
+
+}
