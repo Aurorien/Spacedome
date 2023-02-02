@@ -135,7 +135,7 @@ background-image: url(Bg_space_hem.png);
 #p_openhour {
   margin-left: 1rem;
 }
-
+/* fixa länkarna så att de blir ännu mer användarvänliga */
 #footer_openhour {
   display: flex;
   flex-direction: row;
