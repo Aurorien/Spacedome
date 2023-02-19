@@ -1,4 +1,4 @@
 # Spacedome
 ## Concert dome responsive website. 
 
-A school-project at IT-Högskolan in HTML and CSS.
+A school project in HTML and CSS at IT-Högskolan.
